@@ -1,4 +1,4 @@
-# Demonstrate an issue linking from slides to website
+# Demonstrate an issue linking from slides to HTML page
 
 ## Steps
 
@@ -20,3 +20,6 @@
 5. View the slide deck, and click the "Go home" link
 6. Observe the browser shows plaintext instead of expected HTML, and the URL bar says
    `/slides/test.qmd` instead of the expected `slides/test.html`.
+7. The issue can be resolved by editing `slides/test.qmd` to link to `/index.html`
+   instead of `/index.qmd`. **NOTE**: This breaks the ability of Quarto to detect broken
+   links (e.g. it will be happy with linking `/foo.html` even though that doesn't exist).
